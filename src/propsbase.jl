@@ -70,7 +70,7 @@ function f117(T, p...)
     return p[1]*T + p[2]*(p[3]/T)/tanh(p[3]/T) - p[4]*(p[5]/T)/tanh(p[5]/T)
 end
 
-
+# Look-up dictionary to call the right function from a stored EqNo property
 tfuncs = Dict(
     2   => f2,
     3   => f3,
@@ -90,6 +90,7 @@ tfuncs = Dict(
     117 => f117
 )
 
+# Generic function to call the right temperature dependency
 function calcvectorproperty(T, prop::VectorProperty)
     tfunc = tfuncs[prop.EqNo]
     tfunc(T, prop.A, prop.B, prop.C, prop.D, prop.E)
