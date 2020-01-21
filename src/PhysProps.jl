@@ -9,9 +9,9 @@ export
       extractColumn,
       getPropertyDataFrame
 
-include("readDB.jl")
 include("purecompbase.jl")
 include("propsbase.jl")
 include("properties.jl")
+include("readDB.jl")
 
 end # module

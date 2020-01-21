@@ -1,16 +1,4 @@
-# LibraryIndex, CompoundID
-struct IntVal
-    name::String
-    value::Int
-end
-
-struct StringVal
-    name::String
-    value::String
-end
-
 struct ScalarProperty
-    name::String
     units::String
     value::Float64
 end
@@ -21,7 +9,6 @@ struct RangeBoundary
 end
 
 struct VectorProperty
-    name::String
     units::String
     EqNo::Int
     A::Float64
@@ -34,10 +21,10 @@ struct VectorProperty
 end
 
 struct PureComp
-    LibraryIndex::IntVal
-    CompoundID::IntVal
-    StructureFormula::StringVal
-    Family::IntVal
+    LibraryIndex::Int
+    CompoundID::String
+    StructureFormula::String
+    Family::Int
     CriticalTemperature::ScalarProperty
     CriticalPressure::ScalarProperty
     CriticalVolume::ScalarProperty
@@ -83,5 +70,5 @@ struct PureComp
     ChaoSeaderAcentricFactor::ScalarProperty
     ChaoSeaderSolubilityParameter::ScalarProperty
     ChaoSeaderLiquidVolume::ScalarProperty
-    CAS::StringVal
+    CAS::String
 end
