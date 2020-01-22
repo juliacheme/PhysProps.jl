@@ -6,8 +6,11 @@ using DataFrames
 export
     # read from database, could decide to not export these at later point
       getDBRoot,
-      extractColumn,
-      getPropertyDataFrame
+      name,
+      value,
+      units,
+      parse_compound,
+      parse_property
 
 include("readDB.jl")
 include("purecompbase.jl")
@@ -15,3 +18,4 @@ include("propsbase.jl")
 include("properties.jl")
 
 end # module
+
