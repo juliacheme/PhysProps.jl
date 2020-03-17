@@ -243,6 +243,7 @@ function extractComp(dbRoot, idx)
     )
 end
 
+
 """
 _parse_property(compound_node)
 
@@ -314,3 +315,5 @@ function parse_compound(compound)
     end 
     return comp = Dict{Symbol,Property}((i,j) for (i,j) in zip(symbols,properties))   
 end
+=======
+

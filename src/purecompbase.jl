@@ -27,7 +27,9 @@ name(prop::Property) = prop.name
 units(prop::Property) = prop.units
 
 
+#==
 #those structs are no longer used in this branch.
+
 struct ScalarProperty
     units::String
     value::Float64
@@ -102,3 +104,5 @@ struct PureComp
     ChaoSeaderLiquidVolume::ScalarProperty
     CAS::String
 end
+==#
+
